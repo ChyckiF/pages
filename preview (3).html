@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agustín ❤️ Jennifer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding:40px 20px;
+    background: linear-gradient(-45deg,#ff4e8a,#ff8fb1,#ff3c78,#ff6fa5);
+    background-size:400% 400%;
+    animation: gradient 12s ease infinite;
+    overflow-y:auto;
+    color:white;
+}
+
+@keyframes gradient{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.card{
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(20px);
+    padding:40px;
+    border-radius:30px;
+    width:100%;
+    max-width:600px;
+    box-shadow:0 25px 60px rgba(0,0,0,0.35);
+    text-align:center;
+    max-height:85vh;
+    overflow-y:auto;
+    position:relative;
+}
+
+.card::-webkit-scrollbar{
+    width:8px;
+}
+.card::-webkit-scrollbar-thumb{
+    background:white;
+    border-radius:10px;
+}
+.card::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+h1{
+    font-size:2.2em;
+    font-weight:700;
+    margin-bottom:5px;
+}
+
+.date{
+    font-size:0.9em;
+    opacity:0.8;
+    margin-bottom:20px;
+}
+
+.counter{
+    margin:20px 0 30px 0;
+    font-size:1.1em;
+    font-weight:500;
+    background:rgba(255,255,255,0.15);
+    padding:15px;
+    border-radius:15px;
+}
+
+#question{
+    margin-bottom:25px;
+    font-size:1.2em;
+    font-weight:300;
+}
+
+button{
+    padding:12px 25px;
+    margin:10px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:600;
+    font-size:1em;
+    transition:0.3s;
+}
+
+#yes{
+    background:white;
+    color:#ff3c78;
+}
+
+#yes:hover{
+    transform:scale(1.1);
+}
+
+#no{
+    background:transparent;
+    border:2px solid white;
+    color:white;
+    position:absolute;
+}
+
+#final{
+    display:none;
+    margin-top:20px;
+    font-size:1.3em;
+    animation: fadeIn 1s ease forwards;
+}
+
+#extraSection{
+    display:none;
+    margin-top:30px;
+}
+
+.unlock-btn{
+    background:white;
+    color:#ff3c78;
+    border-radius:20px;
+    padding:8px 18px;
+    margin:6px;
+    font-size:0.9em;
+}
+
+.unlock-btn.locked{
+    opacity:0.4;
+    pointer-events:none;
+}
+
+.phrase{
+    display:none;
+    margin-top:15px;
+    font-size:1em;
+    line-height:1.6em;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(10px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+.heart{
+    position:fixed;
+    color:white;
+    animation: float 6s linear infinite;
+    opacity:0.6;
+}
+
+@keyframes float{
+    from{transform:translateY(100vh);}
+    to{transform:translateY(-10vh);}
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>Agustín ❤️ Jennifer</h1>
+    <div class="date">Nos conocimos el 04/10/2025</div>
+
+    <div class="counter" id="counter"></div>
+
+    <div id="question">Pregunta importante…<br>¿Seguimos sumando meses juntos?</div>
+    <button id="yes">Obvio que sí</button>
+    <button id="no">No</button>
+
+    <div id="final">
+        Sabía que dirías que sí. 😌<br><br>
+        Gracias por estos meses increíbles.<br>
+        Eres mi lugar favorito.<br>
+        Te amo demasiado ❤️
+    </div>
+
+    <div id="extraSection">
+        <h3>Mensajes 💌</h3>
+
+        <button class="unlock-btn">Primer Mensajito</button>
+        <button class="unlock-btn locked">Segundo Mensajito</button>
+        <button class="unlock-btn locked">Tercer Mensajito</button>
+        <button class="unlock-btn locked">Cuarto Mensajito</button>
+        <button class="unlock-btn locked">Quinto Mensajito</button>
+        <button class="unlock-btn locked">Sexto Mensajito</button>
+        <button class="unlock-btn locked">Séptimo Mensajito</button>
+        <button class="unlock-btn locked">Octavo Mensajito</button>
+
+        <div class="phrase">Te amo no solo por lo que eres, sino por lo que soy cuando estoy contigo. Eres mi mayor inspiración y mi felicidad.</div>
+        <div class="phrase">Eres mi sueño más bonito, mi realidad favorita y el motivo por el cual creo en el amor verdadero.</div>
+        <div class="phrase">No hay un solo día en el que no agradezca al destino por haberte puesto en mi camino. Eres lo mejor que me ha pasado.</div>
+        <div class="phrase">Amar es fácil cuando se trata de ti, porque tienes la capacidad de llenar mi vida de luz y esperanza.</div>
+        <div class="phrase">Eres mi pasado, mi presente y mi futuro. Mi vida sin ti no tendría color ni sentido.</div>
+        <div class="phrase">Si tuviera que elegir de nuevo, te elegiría a ti una y otra vez, porque contigo lo tengo todo.</div>
+        <div class="phrase">No importa cuánto tiempo pase, mi amor por ti sigue creciendo, como si cada día fuera la primera vez que me enamoré de ti.</div>
+        <div class="phrase">Eres la mejor decisión que he tomado en mi vida, y cada día que paso contigo confirmo que te elegiría una y mil veces más.</div>
+    </div>
+</div>
+
+<script>
+/* CONTADOR */
+const startDate = new Date("2025-10-04T00:00:00");
+const counter = document.getElementById("counter");
+
+function updateCounter(){
+    const now = new Date();
+    const diff = now - startDate;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    counter.innerHTML = `
+        💞 Llevamos juntos:<br>
+        <strong>${days}</strong> días,
+        <strong>${hours}</strong> horas,
+        <strong>${minutes}</strong> minutos,
+        <strong>${seconds}</strong> segundos
+    `;
+}
+
+setInterval(updateCounter,1000);
+updateCounter();
+
+/* BOTÓN QUE HUYE (CORREGIDO) */
+const noBtn = document.getElementById("no");
+
+noBtn.addEventListener("mouseover", () => {
+    const card = document.querySelector(".card");
+    const rect = card.getBoundingClientRect();
+
+    noBtn.style.position = "absolute";
+
+    const maxX = rect.width - noBtn.offsetWidth - 20;
+    const maxY = rect.height - noBtn.offsetHeight - 20;
+
+    const x = Math.random() * maxX;
+    const y = Math.random() * maxY;
+
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+});
+
+/* ACTIVAR CONTENIDO */
+const yesBtn = document.getElementById("yes");
+const finalMsg = document.getElementById("final");
+const question = document.getElementById("question");
+const extraSection = document.getElementById("extraSection");
+
+yesBtn.addEventListener("click", () => {
+    question.style.display = "none";
+    yesBtn.style.display = "none";
+    noBtn.style.display = "none";
+    finalMsg.style.display = "block";
+    extraSection.style.display = "block";
+});
+
+/* DESBLOQUEO PROGRESIVO */
+const phrases = document.querySelectorAll(".phrase");
+const unlockButtons = document.querySelectorAll(".unlock-btn");
+let current = 0;
+
+unlockButtons.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+        if(index === current){
+            phrases[index].style.display = "block";
+            btn.style.display = "none";
+            current++;
+            if(unlockButtons[current]){
+                unlockButtons[current].classList.remove("locked");
+            }
+        }
+    });
+});
+
+/* CORAZONES */
+function createHeart(){
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random()*100 + "vw";
+    heart.style.fontSize = (Math.random()*20 + 12) + "px";
+    heart.style.animationDuration = (Math.random()*3 + 3) + "s";
+    document.body.appendChild(heart);
+    setTimeout(()=>{ heart.remove(); },6000);
+}
+
+setInterval(createHeart,500);
+</script>
+
+</body>
+</html>
